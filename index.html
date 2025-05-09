@@ -9,74 +9,143 @@
         box-sizing: border-box;
         margin: 0;
         padding: 0;
-        font-family: "Open Sans", Poppins, sans-serif;
+        font-family: "Poppins", "Open Sans", sans-serif;
       }
       body {
         background-color: #f5f5f5;
         color: #333;
-        line-height: 1.6;
+        line-height: 1.5;
         padding: 20px;
       }
       .resume {
-        max-width: 800px;
+        max-width: 8.5in;
         margin: 0 auto;
         background-color: #fff;
-        padding: 40px;
+        padding: 50px;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        min-height: 11in;
+        position: relative;
       }
       .header {
-        text-align: center;
-        margin-bottom: 30px;
+        margin-bottom: 25px;
       }
       .header h1 {
-        font-size: 36px;
+        font-size: 32px;
+        font-weight: bold;
         margin-bottom: 5px;
         color: #2c3e50;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+      .header-line {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 15px;
       }
       .contact-info {
         margin-bottom: 5px;
+        font-size: 12px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+      .contact-item i {
         font-size: 14px;
+        color: #3498db;
       }
       .section {
-        margin-bottom: 25px;
+        margin-bottom: 20px;
       }
       .section-title {
-        font-size: 20px;
+        font-size: 18px;
         text-transform: uppercase;
         color: #2c3e50;
+        font-weight: bold;
         border-bottom: 2px solid #3498db;
         padding-bottom: 5px;
-        margin-bottom: 15px;
+        margin-bottom: 12px;
+        letter-spacing: 1px;
       }
       .item {
         margin-bottom: 15px;
       }
+      .item-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
       .item-title {
         font-weight: bold;
-        margin-bottom: 5px;
+        margin-bottom: 3px;
+        font-size: 16px;
       }
       .item-subtitle {
         font-style: italic;
-        color: #7f8c8d;
-        margin-bottom: 5px;
+        color: #546e7a;
+        margin-bottom: 3px;
+        font-size: 14px;
       }
       .item-date {
-        font-size: 14px;
+        font-size: 13px;
         color: #7f8c8d;
         margin-bottom: 5px;
+        text-align: right;
       }
       .item-description {
         margin-bottom: 10px;
+        font-size: 14px;
+      }
+      .item-description p {
+        margin-bottom: 5px;
+      }
+      .item-description ul {
+        padding-left: 20px;
+        margin-bottom: 5px;
+      }
+      .item-description li {
+        margin-bottom: 3px;
       }
       .skills {
         display: flex;
         flex-wrap: wrap;
+        gap: 8px;
       }
       .skill {
         background-color: #e7f4ff;
         padding: 5px 10px;
-        margin: 5px;
         border-radius: 3px;
+        font-size: 13px;
+      }
+      .two-column {
+        display: flex;
+        gap: 30px;
+      }
+      .column {
+        flex: 1;
+      }
+      .pdf-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        padding: 10px 20px;
+        background-color: #3498db;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+        transition: background-color 0.3s;
+      }
+      .pdf-button:hover {
+        background-color: #2980b9;
       }
       @media print {
         body {
@@ -90,6 +159,7 @@
           margin: 0;
           max-width: 100%;
           width: 100%;
+          min-height: auto;
         }
         a {
           text-decoration: none;
@@ -100,6 +170,7 @@
         }
         .section-title {
           border-bottom-color: #000;
+          color: #000;
         }
         .header h1 {
           color: #000;
@@ -108,35 +179,63 @@
           background-color: #f0f0f0;
           border: 1px solid #ddd;
         }
+        .pdf-button {
+          display: none;
+        }
         @page {
           size: letter;
           margin: 0.5in;
         }
       }
     </style>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
+    <button onclick="generatePDF()" class="pdf-button">
+      <i class="fas fa-file-pdf"></i> Export PDF
+    </button>
+
     <div class="resume">
       <div class="header">
         <h1>Victor Olatunji</h1>
         <div class="contact-info">
-          <span>example@email.com</span> | <span>(123) 456-7890</span> |
-          <span>City, State</span> |
-          <span
-            ><a href="https://linkedin.com/in/yourprofile">LinkedIn</a></span
-          >
-          |
-          <span><a href="https://github.com/yourusername">GitHub</a></span>
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <span>victorolatunji@gmail.com</span>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <span>+234 813 456 7890</span>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Lagos, Nigeria</span>
+          </div>
+          <div class="contact-item">
+            <i class="fab fa-linkedin"></i>
+            <a href="https://linkedin.com/in/victor-olatunji"
+              >linkedin.com/in/victor-olatunji</a
+            >
+          </div>
+          <div class="contact-item">
+            <i class="fab fa-github"></i>
+            <a href="https://github.com/victor-olatunji"
+              >github.com/victor-olatunji</a
+            >
+          </div>
         </div>
       </div>
 
       <div class="section">
         <h2 class="section-title">Summary</h2>
         <p>
-          Dedicated and results-driven professional with a passion for [your
-          field]. Skilled in [key skills], with a proven track record of [major
-          achievement]. Seeking to leverage my skills and experience to
-          contribute to [career goal].
+          Software Engineer with experience in developing web applications using
+          JavaScript, React, and Node.js. Passionate about creating efficient,
+          user-friendly solutions to complex problems. Seeking to leverage my
+          technical skills and experience to contribute to innovative projects.
         </p>
       </div>
 
@@ -144,103 +243,208 @@
         <h2 class="section-title">Experience</h2>
 
         <div class="item">
-          <div class="item-title">Job Title</div>
-          <div class="item-subtitle">Company Name</div>
-          <div class="item-date">Month Year - Present</div>
+          <div class="item-header">
+            <div>
+              <div class="item-title">Frontend Developer</div>
+              <div class="item-subtitle">ABC Technologies</div>
+            </div>
+            <div class="item-date">June 2022 - Present</div>
+          </div>
           <ul class="item-description">
             <li>
-              Accomplishment or responsibility that demonstrates skills and
-              impact
+              Developed responsive web applications using React, Redux, and
+              TypeScript
             </li>
             <li>
-              Accomplishment or responsibility that demonstrates skills and
-              impact
+              Collaborated with UX designers to implement user-friendly
+              interfaces and improve usability
             </li>
             <li>
-              Accomplishment or responsibility that demonstrates skills and
-              impact
+              Optimized application performance, reducing load times by 30%
+            </li>
+            <li>
+              Participated in agile development cycles, including daily
+              stand-ups and sprint planning
             </li>
           </ul>
         </div>
 
         <div class="item">
-          <div class="item-title">Previous Job Title</div>
-          <div class="item-subtitle">Previous Company Name</div>
-          <div class="item-date">Month Year - Month Year</div>
+          <div class="item-header">
+            <div>
+              <div class="item-title">Web Developer Intern</div>
+              <div class="item-subtitle">XYZ Solutions</div>
+            </div>
+            <div class="item-date">January 2022 - May 2022</div>
+          </div>
           <ul class="item-description">
             <li>
-              Accomplishment or responsibility that demonstrates skills and
-              impact
+              Assisted in developing and maintaining company websites using
+              HTML, CSS, and JavaScript
             </li>
             <li>
-              Accomplishment or responsibility that demonstrates skills and
-              impact
+              Created responsive designs that improved mobile user experience
             </li>
             <li>
-              Accomplishment or responsibility that demonstrates skills and
-              impact
+              Collaborated with senior developers to implement new features and
+              fix bugs
+            </li>
+            <li>
+              Gained experience with version control systems and collaborative
+              development workflows
             </li>
           </ul>
         </div>
-
-        <!-- Add more experience items as needed -->
       </div>
 
-      <div class="section">
-        <h2 class="section-title">Education</h2>
+      <div class="two-column">
+        <div class="column">
+          <div class="section">
+            <h2 class="section-title">Education</h2>
 
-        <div class="item">
-          <div class="item-title">Degree Name</div>
-          <div class="item-subtitle">University Name</div>
-          <div class="item-date">Graduation Year</div>
-          <div class="item-description">
-            <p>Relevant coursework, achievements, or projects</p>
+            <div class="item">
+              <div class="item-header">
+                <div>
+                  <div class="item-title">
+                    Bachelor of Science in Computer Science
+                  </div>
+                  <div class="item-subtitle">University of Lagos</div>
+                </div>
+                <div class="item-date">2018 - 2022</div>
+              </div>
+              <div class="item-description">
+                <p>GPA: 3.8/4.0</p>
+                <p>
+                  Relevant Coursework: Data Structures, Algorithms, Web
+                  Development, Database Systems
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <h2 class="section-title">Certifications</h2>
+
+            <div class="item">
+              <div class="item-header">
+                <div>
+                  <div class="item-title">React Developer Certification</div>
+                  <div class="item-subtitle">Meta</div>
+                </div>
+                <div class="item-date">2023</div>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="item-header">
+                <div>
+                  <div class="item-title">
+                    JavaScript Algorithms and Data Structures
+                  </div>
+                  <div class="item-subtitle">freeCodeCamp</div>
+                </div>
+                <div class="item-date">2022</div>
+              </div>
+            </div>
           </div>
         </div>
 
-        <!-- Add more education items as needed -->
-      </div>
+        <div class="column">
+          <div class="section">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills">
+              <div class="skill">JavaScript</div>
+              <div class="skill">TypeScript</div>
+              <div class="skill">React</div>
+              <div class="skill">Node.js</div>
+              <div class="skill">Express</div>
+              <div class="skill">MongoDB</div>
+              <div class="skill">HTML5</div>
+              <div class="skill">CSS3/SASS</div>
+              <div class="skill">Git</div>
+              <div class="skill">RESTful APIs</div>
+              <div class="skill">Redux</div>
+              <div class="skill">Jest</div>
+              <div class="skill">Responsive Design</div>
+              <div class="skill">UI/UX</div>
+            </div>
+          </div>
 
-      <div class="section">
-        <h2 class="section-title">Skills</h2>
-        <div class="skills">
-          <div class="skill">Skill 1</div>
-          <div class="skill">Skill 2</div>
-          <div class="skill">Skill 3</div>
-          <div class="skill">Skill 4</div>
-          <div class="skill">Skill 5</div>
-          <div class="skill">Skill 6</div>
-          <div class="skill">Skill 7</div>
-          <div class="skill">Skill 8</div>
-          <!-- Add more skills as needed -->
-        </div>
-      </div>
+          <div class="section">
+            <h2 class="section-title">Projects</h2>
 
-      <div class="section">
-        <h2 class="section-title">Projects</h2>
+            <div class="item">
+              <div class="item-header">
+                <div>
+                  <div class="item-title">E-Commerce Platform</div>
+                  <div class="item-subtitle">React, Node.js, MongoDB</div>
+                </div>
+              </div>
+              <div class="item-description">
+                <p>
+                  Developed a full-stack e-commerce platform with user
+                  authentication, product catalog, and payment processing
+                  integration. Implemented responsive design for optimal user
+                  experience across devices.
+                </p>
+              </div>
+            </div>
 
-        <div class="item">
-          <div class="item-title">Project Name</div>
-          <div class="item-subtitle">Technologies Used</div>
-          <div class="item-description">
-            <p>Brief description of the project, your role, and outcomes</p>
+            <div class="item">
+              <div class="item-header">
+                <div>
+                  <div class="item-title">Task Management Application</div>
+                  <div class="item-subtitle">React, Redux, Firebase</div>
+                </div>
+              </div>
+              <div class="item-description">
+                <p>
+                  Created a collaborative task management app with real-time
+                  updates, user roles, and analytics dashboard. Features include
+                  drag-and-drop organization, priority flags, and deadline
+                  notifications.
+                </p>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="item-header">
+                <div>
+                  <div class="item-title">Weather Dashboard</div>
+                  <div class="item-subtitle">JavaScript, OpenWeather API</div>
+                </div>
+              </div>
+              <div class="item-description">
+                <p>
+                  Built a weather dashboard that displays current weather
+                  conditions and 5-day forecast for any city. Implemented
+                  geolocation for automatic local weather updates.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
-
-        <!-- Add more project items as needed -->
-      </div>
-
-      <div class="section">
-        <h2 class="section-title">Certifications</h2>
-
-        <div class="item">
-          <div class="item-title">Certification Name</div>
-          <div class="item-subtitle">Issuing Organization</div>
-          <div class="item-date">Month Year</div>
-        </div>
-
-        <!-- Add more certification items as needed -->
       </div>
     </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script>
+      function generatePDF() {
+        // Get the resume element
+        const element = document.querySelector(".resume");
+
+        // Configure html2pdf options
+        const opt = {
+          margin: [0.5, 0.5, 0.5, 0.5],
+          filename: "Victor_Olatunji_Resume.pdf",
+          image: { type: "jpeg", quality: 0.98 },
+          html2canvas: { scale: 2, useCORS: true },
+          jsPDF: { unit: "in", format: "letter", orientation: "portrait" },
+        };
+
+        // Create and save the PDF
+        html2pdf().set(opt).from(element).save();
+      }
+    </script>
   </body>
 </html>

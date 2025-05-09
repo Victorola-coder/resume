@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Victor Olatunji - Resume</title>
+    <style>
+      body {
+        font-family: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #f0feff;
+        margin: 0;
+        padding: 20px;
+        background-color: #061417;
+      }
+      a .container {
+        max-width: 800px;
+        margin: 0 auto;
+        background: #0a1c20;
+        padding: 40px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        border: 1px solid rgba(29, 215, 96, 0.2);
+      }
+      header {
+        margin-bottom: 40px;
+        text-align: center;
+      }
+      h1 {
+        margin: 0;
+        color: #1ed760;
+        font-size: 2.5em;
+        font-weight: 700;
+      }
+      .subtitle {
+        color: rgba(240, 254, 255, 0.8);
+      }
+      .contact-info {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 20px 0;
+        font-size: 0.9em;
+        color: rgba(240, 254, 255, 0.6);
+      }
+      .contact-info p {
+        margin: 5px 15px;
+        display: flex;
+        align-items: center;
+      }
+      .icon {
+        margin-right: 8px;
+        color: #1ed760;
+      }
+      h2 {
+        color: #1ed760;
+        border-bottom: 2px solid rgba(29, 215, 96, 0.3);
+        padding-bottom: 8px;
+        margin-top: 40px;
+        font-weight: 600;
+      }
+      .job {
+        margin-bottom: 30px;
+        position: relative;
+        padding-left: 25px;
+      }
+      .job:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 2px;
+        background-color: rgba(29, 215, 96, 0.2);
+      }
+      .job:after {
+        content: "";
+        position: absolute;
+        left: -4px;
+        top: 0;
+        height: 10px;
+        width: 10px;
+        border-radius: 50%;
+        background-color: #1ed760;
+      }
+      .job-title {
+        font-weight: 600;
+        margin-bottom: 5px;
+        font-size: 1.1em;
+        color: #ffffff;
+      }
+      .company {
+        color: #1ed760;
+        font-weight: 600;
+        margin-bottom: 5px;
+      }
+      .period {
+        font-style: italic;
+        color: rgba(240, 254, 255, 0.6);
+        margin-bottom: 10px;
+        font-size: 0.9em;
+      }
+      .description {
+        margin-top: 8px;
+        color: rgba(240, 254, 255, 0.8);
+      }
+      .skills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 20px;
+      }
+      .skill {
+        background: rgba(29, 215, 96, 0.1);
+        border: 1px solid rgba(29, 215, 96, 0.3);
+        padding: 8px 16px;
+        border-radius: 4px;
+        font-size: 0.9em;
+        transition: all 0.3s ease;
+      }
+      .skill:hover {
+        background: rgba(29, 215, 96, 0.2);
+        transform: translateY(-2px);
+      }
+      .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 30px;
+      }
+      .social-link {
+        color: rgba(240, 254, 255, 0.8);
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+      .social-link:hover {
+        color: #1ed760;
+      }
+      @media print {
+        body {
+          background-color: #ffffff;
+          color: #000000;
+        }
+        .container {
+          background: #ffffff;
+          box-shadow: none;
+          border: none;
+          padding: 0;
+        }
+        h1,
+        h2,
+        .company {
+          color: #1ed760;
+        }
+        .job-title {
+          color: #000000;
+        }
+        .description,
+        .subtitle,
+        .contact-info {
+          color: #333333;
+        }
+        .job:before {
+          background-color: rgba(29, 215, 96, 0.5);
+        }
+        .skill {
+          background: rgba(29, 215, 96, 0.1);
+          border-color: rgba(29, 215, 96, 0.5);
+          color: #333333;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Victor Olatunji</h1>
+        <p class="subtitle">Creative Frontend Developer</p>
+        <div class="contact-info">
+          <p><span class="icon">📧</span> victoluolatunji@gmail.com</p>
+          <p><span class="icon">📱</span> +2349075789680</p>
+          <p><span class="icon">🔗</span> github.com/victorola-coder</p>
+        </div>
+      </header>
+
+      <section>
+        <h2>Professional Summary</h2>
+        <p class="description">
+          Passionate and dedicated, I'm an aspiring software developer immersed
+          in coding challenges and projects. The dynamic nature of software
+          development intrigues me, and I'm eager to bring my fresh insights to
+          your team as a developer. My journey has fostered technical skills and
+          attributes like adaptability and communication. Transitioning from
+          student to professional, I'm excited to contribute meaningfully to
+          your company's vision.
+        </p>
+      </section>
+
+      <section>
+        <h2>Experience</h2>
+
+        <div class="job">
+          <div class="job-title">Fullstack Developer</div>
+          <div class="company">Momentum</div>
+          <div class="period">Freelance - March 2024 - May 2024</div>
+          <div class="description">
+           Built a chat bot for your business integrated with whatsapp.
+          </div>
+        </div>
+
+        <div class="job">
+          <div class="job-title">Software Engineer</div>
+          <div class="company">Showmeelove</div>
+          <div class="period">side project</div>
+          <div class="description">
+           Literally buymeeacoffe for african creators.
+          </div>
+        </div>
+
+        <div class="job">
+          <div class="job-title">Software Developer</div>
+          <div class="company">Adrise.AI</div>
+          <div class="period">Freelance</div>
+          <div class="description">
+            Working as a frontend developer with the responsibility of building
+            and managing websites with a team of Creative developers.
+          </div>
+        </div>
+
+        <div class="job">
+          <div class="job-title">Software Developer</div>
+          <div class="company">Studioperks, Lagos, Nigeria</div>
+          <div class="period">Freelance - 1 month</div>
+          <div class="description">
+            Worked as a frontend developer building the system of the company,
+            creating beautiful interfaces that users love.
+          </div>
+        </div>
+
+        <div class="job">
+          <div class="job-title">Web Developer</div>
+          <div class="company">Emerald's Dairy</div>
+          <div class="period">Freelance - 1 month</div>
+          <div class="description">
+            Built this for a friend, to gift his friend on Valentine's Day.
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Skills</h2>
+        <div class="skills">
+          <div class="skill">React.js</div>
+          <div class="skill">Next.js</div>
+          <div class="skill">TailwindCSS</div>
+          <div class="skill">JavaScript</div>
+          <div class="skill">TypeScript</div>
+          <div class="skill">Backend Development</div>
+          <div class="skill">Git</div>
+          <div class="skill">GitHub</div>
+          <div class="skill">Responsive Design</div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Education</h2>
+        <div class="job">
+          <div class="job-title">Computer Science and Cyber Security</div>
+          <div class="company">Obafemi Awolowo University, Ile Ife.</div>
+          <div class="period">2023 - 2027</div>
+        </div>
+      </section>
+
+      <div class="social-links">
+        <a
+          href="https://www.linkedin.com/in/victor-olatunji-889568246"
+          class="social-link"
+          >LinkedIn</a
+        >
+        <a href="https://github.com/victorola-coder" class="social-link"
+          >GitHub</a
+        >
+        <a href="https://twitter.com/HeyVickyJay" class="social-link"
+          >Twitter</a
+        >
+      </div>
+    </div>
+  </body>
+</html>
