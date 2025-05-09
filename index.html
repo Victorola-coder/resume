@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Victor Olatunji - Resume</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: "Open Sans", Poppins, sans-serif;
+      }
+      body {
+        background-color: #f5f5f5;
+        color: #333;
+        line-height: 1.6;
+        padding: 20px;
+      }
+      .resume {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 40px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+      .header {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+      .header h1 {
+        font-size: 36px;
+        margin-bottom: 5px;
+        color: #2c3e50;
+      }
+      .contact-info {
+        margin-bottom: 5px;
+        font-size: 14px;
+      }
+      .section {
+        margin-bottom: 25px;
+      }
+      .section-title {
+        font-size: 20px;
+        text-transform: uppercase;
+        color: #2c3e50;
+        border-bottom: 2px solid #3498db;
+        padding-bottom: 5px;
+        margin-bottom: 15px;
+      }
+      .item {
+        margin-bottom: 15px;
+      }
+      .item-title {
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+      .item-subtitle {
+        font-style: italic;
+        color: #7f8c8d;
+        margin-bottom: 5px;
+      }
+      .item-date {
+        font-size: 14px;
+        color: #7f8c8d;
+        margin-bottom: 5px;
+      }
+      .item-description {
+        margin-bottom: 10px;
+      }
+      .skills {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .skill {
+        background-color: #e7f4ff;
+        padding: 5px 10px;
+        margin: 5px;
+        border-radius: 3px;
+      }
+      @media print {
+        body {
+          background-color: #fff;
+          padding: 0;
+          margin: 0;
+        }
+        .resume {
+          box-shadow: none;
+          padding: 0.5in;
+          margin: 0;
+          max-width: 100%;
+          width: 100%;
+        }
+        a {
+          text-decoration: none;
+          color: #000;
+        }
+        .section {
+          page-break-inside: avoid;
+        }
+        .section-title {
+          border-bottom-color: #000;
+        }
+        .header h1 {
+          color: #000;
+        }
+        .skill {
+          background-color: #f0f0f0;
+          border: 1px solid #ddd;
+        }
+        @page {
+          size: letter;
+          margin: 0.5in;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="resume">
+      <div class="header">
+        <h1>Victor Olatunji</h1>
+        <div class="contact-info">
+          <span>example@email.com</span> | <span>(123) 456-7890</span> |
+          <span>City, State</span> |
+          <span
+            ><a href="https://linkedin.com/in/yourprofile">LinkedIn</a></span
+          >
+          |
+          <span><a href="https://github.com/yourusername">GitHub</a></span>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2 class="section-title">Summary</h2>
+        <p>
+          Dedicated and results-driven professional with a passion for [your
+          field]. Skilled in [key skills], with a proven track record of [major
+          achievement]. Seeking to leverage my skills and experience to
+          contribute to [career goal].
+        </p>
+      </div>
+
+      <div class="section">
+        <h2 class="section-title">Experience</h2>
+
+        <div class="item">
+          <div class="item-title">Job Title</div>
+          <div class="item-subtitle">Company Name</div>
+          <div class="item-date">Month Year - Present</div>
+          <ul class="item-description">
+            <li>
+              Accomplishment or responsibility that demonstrates skills and
+              impact
+            </li>
+            <li>
+              Accomplishment or responsibility that demonstrates skills and
+              impact
+            </li>
+            <li>
+              Accomplishment or responsibility that demonstrates skills and
+              impact
+            </li>
+          </ul>
+        </div>
+
+        <div class="item">
+          <div class="item-title">Previous Job Title</div>
+          <div class="item-subtitle">Previous Company Name</div>
+          <div class="item-date">Month Year - Month Year</div>
+          <ul class="item-description">
+            <li>
+              Accomplishment or responsibility that demonstrates skills and
+              impact
+            </li>
+            <li>
+              Accomplishment or responsibility that demonstrates skills and
+              impact
+            </li>
+            <li>
+              Accomplishment or responsibility that demonstrates skills and
+              impact
+            </li>
+          </ul>
+        </div>
+
+        <!-- Add more experience items as needed -->
+      </div>
+
+      <div class="section">
+        <h2 class="section-title">Education</h2>
+
+        <div class="item">
+          <div class="item-title">Degree Name</div>
+          <div class="item-subtitle">University Name</div>
+          <div class="item-date">Graduation Year</div>
+          <div class="item-description">
+            <p>Relevant coursework, achievements, or projects</p>
+          </div>
+        </div>
+
+        <!-- Add more education items as needed -->
+      </div>
+
+      <div class="section">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills">
+          <div class="skill">Skill 1</div>
+          <div class="skill">Skill 2</div>
+          <div class="skill">Skill 3</div>
+          <div class="skill">Skill 4</div>
+          <div class="skill">Skill 5</div>
+          <div class="skill">Skill 6</div>
+          <div class="skill">Skill 7</div>
+          <div class="skill">Skill 8</div>
+          <!-- Add more skills as needed -->
+        </div>
+      </div>
+
+      <div class="section">
+        <h2 class="section-title">Projects</h2>
+
+        <div class="item">
+          <div class="item-title">Project Name</div>
+          <div class="item-subtitle">Technologies Used</div>
+          <div class="item-description">
+            <p>Brief description of the project, your role, and outcomes</p>
+          </div>
+        </div>
+
+        <!-- Add more project items as needed -->
+      </div>
+
+      <div class="section">
+        <h2 class="section-title">Certifications</h2>
+
+        <div class="item">
+          <div class="item-title">Certification Name</div>
+          <div class="item-subtitle">Issuing Organization</div>
+          <div class="item-date">Month Year</div>
+        </div>
+
+        <!-- Add more certification items as needed -->
+      </div>
+    </div>
+  </body>
+</html>
