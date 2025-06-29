@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Victor Olatunji - Social Media Manager Resume</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: "Poppins", "Open Sans", sans-serif;
+      }
+      body {
+        background-color: #f5f5f5;
+        color: #333;
+        line-height: 1.4;
+        padding: 20px;
+      }
+      .resume {
+        max-width: 8.5in;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 40px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        min-height: 11in;
+        position: relative;
+      }
+      .header {
+        margin-bottom: 20px;
+      }
+      .header h1 {
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: 5px;
+        color: #2c3e50;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+      .header-line {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 12px;
+      }
+      .contact-info {
+        margin-bottom: 5px;
+        font-size: 11px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+      }
+      .contact-item i {
+        font-size: 12px;
+        color: #3498db;
+      }
+      .section {
+        margin-bottom: 15px;
+      }
+      .section-title {
+        font-size: 16px;
+        text-transform: uppercase;
+        color: #2c3e50;
+        font-weight: bold;
+        border-bottom: 2px solid #3498db;
+        padding-bottom: 3px;
+        margin-bottom: 10px;
+        letter-spacing: 1px;
+      }
+      .item {
+        margin-bottom: 12px;
+      }
+      .item-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+      .item-title {
+        font-weight: bold;
+        margin-bottom: 2px;
+        font-size: 14px;
+      }
+      .item-subtitle {
+        font-style: italic;
+        color: #546e7a;
+        margin-bottom: 2px;
+        font-size: 12px;
+      }
+      .item-date {
+        font-size: 10px;
+        color: #7f8c8d;
+        margin-bottom: 5px;
+        white-space: nowrap;
+        text-align: right;
+      }
+      .item-link {
+        font-size: 10px;
+        color: #7f8c8d;
+        margin-bottom: 5px;
+        white-space: nowrap;
+        text-align: right;
+      }
+      .item-description {
+        margin-bottom: 8px;
+        font-size: 12px;
+      }
+      .item-description p {
+        margin-bottom: 4px;
+      }
+      .item-description ul {
+        padding-left: 16px;
+        margin-bottom: 4px;
+      }
+      .item-description li {
+        margin-bottom: 2px;
+      }
+      .skills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+      }
+      .skill {
+        background-color: #e7f4ff;
+        padding: 3px 8px;
+        border-radius: 3px;
+        font-size: 11px;
+      }
+      .two-column {
+        display: flex;
+        gap: 25px;
+      }
+      .column {
+        flex: 1;
+      }
+      .pdf-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        padding: 10px 20px;
+        background-color: #3498db;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+        transition: background-color 0.3s;
+      }
+      .pdf-button:hover {
+        background-color: #2980b9;
+      }
+      @media print {
+        body {
+          background-color: #fff;
+          padding: 0;
+          margin: 0;
+          font-size: 11px;
+        }
+        .resume {
+          box-shadow: none;
+          padding: 0.4in;
+          margin: 0;
+          max-width: 100%;
+          width: 100%;
+          min-height: auto;
+        }
+        .header h1 {
+          font-size: 24px;
+        }
+        .section-title {
+          font-size: 14px;
+        }
+        .item-title {
+          font-size: 12px;
+        }
+        .item-subtitle {
+          font-size: 11px;
+        }
+        .item-description {
+          font-size: 11px;
+        }
+        .skill {
+          font-size: 10px;
+          padding: 2px 6px;
+        }
+        .section {
+          margin-bottom: 12px;
+        }
+        .item {
+          margin-bottom: 8px;
+        }
+        a {
+          text-decoration: none;
+          color: #000;
+        }
+        .section {
+          page-break-inside: avoid;
+        }
+        .section-title {
+          border-bottom-color: #000;
+          color: #000;
+        }
+        .header h1 {
+          color: #000;
+        }
+        .skill {
+          background-color: #f0f0f0;
+          border: 1px solid #ddd;
+        }
+        .pdf-button {
+          display: none;
+        }
+        @page {
+          size: letter;
+          margin: 0.4in;
+        }
+      }
+    </style>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <button onclick="generatePDF()" class="pdf-button">
+      <i class="fas fa-file-pdf"></i> Export PDF
+    </button>
+
+    <div class="resume">
+      <div class="header">
+        <h1>Victor Olatunji</h1>
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <span>victoluolatunji@gmail.com</span>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <span>+234 9075789680</span>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Osun, Nigeria</span>
+          </div>
+          <!-- <div class="contact-item">
+            <i class="fab fa-linkedin"></i>
+            <a href="https://linkedin.com/in/victor-olatunji"
+              >linkedin.com/in/victor-olatunji</a
+            >
+          </div>
+          <div class="contact-item">
+            <i class="fab fa-github"></i>
+            <a href="https://github.com/victorola-coder"
+              >github.com/victorola-coder</a
+            >
+          </div>
+          <div class="contact-item">
+            <i class="fa fa-globe"></i>
+            <a href="https://vickyjay.vercel.app">Portfolio</a>
+          </div> -->
+        </div>
+      </div>
+
+      <div class="section">
+        <h2 class="section-title">Professional Summary</h2>
+        <p>
+          Creative and results-driven Social Media Manager with expertise in
+          developing engaging content strategies, managing multi-platform
+          campaigns, and driving brand awareness. Proven track record of
+          increasing follower engagement by 40% and implementing data-driven
+          social media strategies that boost brand visibility and customer
+          acquisition. Passionate about leveraging social media trends and
+          analytics to achieve business objectives.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2 class="section-title">Core Competencies</h2>
+        <div class="skills">
+          <div class="skill">Social Media Strategy</div>
+          <div class="skill">Content Creation</div>
+          <div class="skill">Community Management</div>
+          <div class="skill">Brand Management</div>
+          <div class="skill">Influencer Relations</div>
+          <div class="skill">Campaign Management</div>
+          <div class="skill">Analytics & Reporting</div>
+          <div class="skill">Paid Social Advertising</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2 class="section-title">Experience</h2>
+
+        <div class="item">
+          <div class="item-header">
+            <div>
+              <div class="item-title">Senior Social Media Manager</div>
+              <div class="item-subtitle">Zero Studio, India.</div>
+            </div>
+            <div class="item-date">March 2024 - April 2024</div>
+          </div>
+          <ul class="item-description">
+            <li>
+              Led social media strategy for multiple client accounts, increasing
+              overall engagement by 40%
+            </li>
+            <li>
+              Created and managed content calendars across Instagram, Facebook,
+              Twitter, and LinkedIn
+            </li>
+            <li>
+              Optimized social media campaigns, reducing cost-per-acquisition by
+              35% through targeted advertising
+            </li>
+            <li>
+              Mentored junior social media coordinators and conducted campaign
+              performance reviews
+            </li>
+          </ul>
+        </div>
+
+        <div class="item">
+          <div class="item-header">
+            <div>
+              <div class="item-title">Social Media Specialist</div>
+              <div class="item-subtitle">Showmeelove</div>
+            </div>
+            <div class="item-date">January 2022 - July 2024</div>
+          </div>
+          <ul class="item-description">
+            <li>
+              Developed comprehensive social media strategies using analytics
+              tools and trend analysis
+            </li>
+            <li>
+              Managed brand presence across platforms, increased follower count
+              by 25% and engagement rates
+            </li>
+            <li>
+              Collaborated with influencers and managed partnership campaigns
+            </li>
+            <li>
+              Created viral content campaigns and participated in
+              cross-functional marketing initiatives
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="two-column">
+        <div class="column">
+          <div class="section">
+            <h2 class="section-title">Education</h2>
+            <div class="item">
+              <div class="item-header">
+                <div>
+                  <div class="item-title">
+                    BS Computer Science & Cyber Security
+                  </div>
+                  <div class="item-subtitle">Obafemi Awolowo University</div>
+                </div>
+                <div class="item-date">2023 - 2027</div>
+              </div>
+              <div class="item-description">
+                <p>GPA: 4.8/5.0</p>
+                <p>Focus: Digital Marketing, Data Analytics</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <h2 class="section-title">Certifications</h2>
+            <div class="item">
+              <div class="item-title">
+                Facebook Social Media Marketing Professional
+              </div>
+              <div class="item-subtitle">Meta (2023)</div>
+            </div>
+            <div class="item">
+              <div class="item-title">Google Analytics Certified</div>
+              <div class="item-subtitle">Google (2023)</div>
+            </div>
+            <div class="item">
+              <div class="item-title">Hootsuite Social Media Marketing</div>
+              <div class="item-subtitle">Hootsuite Academy (2022)</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="section">
+            <h2 class="section-title">Social Media Platforms</h2>
+            <div class="skills">
+              <div class="skill">Instagram</div>
+              <div class="skill">Facebook</div>
+              <div class="skill">Twitter/X</div>
+              <div class="skill">LinkedIn</div>
+              <div class="skill">TikTok</div>
+              <div class="skill">YouTube</div>
+              <div class="skill">Pinterest</div>
+              <div class="skill">Snapchat</div>
+              <div class="skill">Reddit</div>
+              <div class="skill">Discord</div>
+              <div class="skill">Threads</div>
+            </div>
+          </div>
+
+          <div class="section">
+            <h2 class="section-title">Tools & Analytics</h2>
+            <div class="skills">
+              <div class="skill">Hootsuite</div>
+              <div class="skill">Buffer</div>
+              <div class="skill">Sprout Social</div>
+              <div class="skill">Canva</div>
+              <div class="skill">Adobe Creative Suite</div>
+              <div class="skill">Google Analytics</div>
+              <div class="skill">Facebook Ads Manager</div>
+              <div class="skill">Later</div>
+              <div class="skill">Mailchimp</div>
+              <div class="skill">Figma</div>
+              <div class="skill">Brandwatch</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2 class="section-title">Social Media Campaigns & Projects</h2>
+
+        <div class="item">
+          <div class="item-header">
+            <div>
+              <div class="item-title">Pamoja Community Campaign</div>
+              <div class="item-subtitle">
+                Instagram, Facebook, Twitter, TikTok
+              </div>
+            </div>
+          </div>
+          <div class="item-description">
+            <p>
+              Launched viral community engagement campaign that increased
+              platform sign-ups by 150% and generated 2.5M impressions across
+              all platforms.
+            </p>
+            <p class="item-link">pamouja.com</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="item-header">
+            <div>
+              <div class="item-title">Adrise.AI Product Launch</div>
+              <div class="item-subtitle">
+                LinkedIn, Twitter, Instagram, YouTube
+              </div>
+            </div>
+          </div>
+          <div class="item-description">
+            <p>
+              Orchestrated comprehensive product launch campaign featuring
+              influencer partnerships, user-generated content, and targeted ads
+              resulting in 300% increase in brand awareness.
+            </p>
+            <p class="item-link">adrise.ai</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="item-header">
+            <div>
+              <div class="item-title">TrexHQ B2B Growth Strategy</div>
+              <div class="item-subtitle">
+                LinkedIn, Twitter, Facebook Business
+              </div>
+            </div>
+          </div>
+          <div class="item-description">
+            <p>
+              Developed B2B-focused social media strategy that generated 200+
+              qualified leads and increased website traffic by 180% through
+              strategic content and thought leadership posts.
+            </p>
+            <p class="item-link">trex.com</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2 class="section-title">Campaign Achievements</h2>
+
+        <div class="item">
+          <div class="item-header">
+            <div>
+              <div class="item-title">Viral Mobile App Promotion</div>
+              <div class="item-subtitle">Multi-platform Campaign</div>
+            </div>
+          </div>
+          <div class="item-description">
+            <p>
+              Created engaging video content and influencer partnerships for
+              mobile app launches, achieving 5M+ total views and 50K+ app
+              downloads within first month.
+            </p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="item-header">
+            <div>
+              <div class="item-title">Brand Awareness Campaign</div>
+              <div class="item-subtitle">Instagram, TikTok, Facebook</div>
+            </div>
+          </div>
+          <div class="item-description">
+            <p>
+              Developed hashtag campaign that generated 10M+ impressions and
+              increased brand mention by 400% through strategic user-generated
+              content initiatives.
+            </p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="item-header">
+            <div>
+              <div class="item-title">E-commerce Social Commerce</div>
+              <div class="item-subtitle">Instagram Shopping, Facebook Shop</div>
+            </div>
+          </div>
+          <div class="item-description">
+            <p>
+              Implemented social commerce strategy resulting in 60% increase in
+              social media driven sales and 35% improvement in conversion rates.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="two-column">
+        <div class="column">
+          <div class="section">
+            <h2 class="section-title">References</h2>
+            <p>References available upon request</p>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="section">
+            <h2 class="section-title">Languages</h2>
+            <div class="item">
+              <div class="item-title">English</div>
+              <div class="item-description">
+                <p>Fluent</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script>
+      function generatePDF() {
+        // Get the resume element
+        const element = document.querySelector(".resume");
+
+        // Configure html2pdf options
+        const opt = {
+          margin: [0.5, 0.5, 0.5, 0.5],
+          filename: "Victor_Olatunji_Social_Media_Manager_Resume.pdf",
+          image: { type: "jpeg", quality: 0.98 },
+          html2canvas: { scale: 2, useCORS: true },
+          jsPDF: { unit: "in", format: "letter", orientation: "portrait" },
+        };
+
+        // Create and save the PDF
+        html2pdf().set(opt).from(element).save();
+      }
+    </script>
+  </body>
+</html>
